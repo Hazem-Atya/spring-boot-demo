@@ -13,3 +13,6 @@ public class DemoApplication {
     }
 
 }
+/**
+ Cette classe doit etre dans un package parent de tous les autres composants
+ pour qu'elle puisse les voir */
