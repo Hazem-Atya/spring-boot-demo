@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.css">
+    <link rel="stylesheet" href="src/main/resources/static/node_modules/bootstrap/dist/css/bootstrap.css">
+
+</head>
+<body>
+<br>
+<div class="container  ">
+    <h1 class="alert alert-primary " >Hello <span th:text="${user.fullName}"></span></h1>
+    <p>Age: <span th:text="${user.age}" ></span></p>
+    <p>Employed: <span th:text="${user.Employed}" ></span></p>
+    <p>Gender: <span th:text="${user.gender}" ></span></p>
+</div>
+</body>
+</html>

@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Home</title>
+    <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.css">
+</head>
+<body>
+<div class="container">
+    <h1>Hello Dear user </h1>
+    <p>Enter your data below</p>
+    <form action="/create" method="post" th:object="${formData}">
+        <div class="form-group">
+            <label for="exampleInputEmail1">Full name</label>
+                <input th:field="${formData.fullName}" type="text"  class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter your full name">
+        </div>
+        <div class="form-group">
+            <label for="exampleInputPassword1">Age</label>
+            <input  th:field="${formData.age}" type="text" class="form-control" id="exampleInputPassword1" placeholder="Age">
+        </div>
+        <div class="form-check">
+            <input  th:value="true"  th:field="${formData.employed}" type="checkbox" class="form-check-input" id="exampleCheck1">
+            <label class="form-check-label" for="exampleCheck1">Employed</label>
+        </div>
+        <div>
+            Sex:
+        <div class="form-check">
+
+            <input class="form-check-input" th:field="${formData.gender}" th:value="Male" type="radio" name="exampleRadios" id="exampleRadios1"  checked>
+            <label class="form-check-label" for="exampleRadios1">
+                Male
+            </label>
+        </div>
+        <div class="form-check">
+            <input th:field="${formData.gender}" class="form-check-input" th:value="Female" type="radio" name="exampleRadios" id="exampleRadios2" >
+            <label class="form-check-label" for="exampleRadios2">
+                Female
+            </label>
+        </div>
+        </div>
+        <button type="submit" class="btn btn-primary">Submit</button>
+        <button type="reset" class="btn btn-primary">Reset</button>
+
+    </form>
+</div>
+</body>
+</html>
